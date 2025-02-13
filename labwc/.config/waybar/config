@@ -1,0 +1,26 @@
+{
+  "layer: "top",
+  "position": "bottom",
+  "height": 32,
+  "spacing": 0,
+  "modules-left": [],
+  "modules-center": [],
+  "modules-right": [],
+
+  "func/memo": {
+    "format": "MEMO",
+    "on-click": "mousepad ~/memo.txt",
+    "tooltip": false
+  }
+
+  "clock": {
+    "format": "<span text-trasform='uppercase'>{:%a %d %b %H:%M}</span>",
+    "format-alt": <span text-trasform='uppercase"{:%H:%M}</span>",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+  }
+}
