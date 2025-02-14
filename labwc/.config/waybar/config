@@ -17,7 +17,7 @@
     "format": "RUN",
     "on-click": "tofi-drun",
     "tooltip": "false"
-  }
+  },
 
   "clock": {
     "format": "<span text-trasform='uppercase'>{:%a %d %b %H:%M}</span>",
