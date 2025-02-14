@@ -1,12 +1,26 @@
 * {
   font-family: Jetbrains Mono, FontAwesome;
-  font-size: 12px;
+  font-size: 14px;
 }
 
-window #waybar {
+window#waybar{
   background: rgba(255, 255, 255, 0.3);
   color: #3D3E40;
   transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+tooltip {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+tooltip label {
+  font-weight: bold;
+  color: #d3d3d3;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
 .modules-right {
@@ -27,3 +41,7 @@ window #waybar {
     margin-right: 0;
 }
 
+#bluetooth, #cpu, #memory, #network, #tray, #mode, #clock, #custom-run, #custom-memo {
+    padding: 2px 16px 0px 16px;
+    color: #3D3E40;
+}
