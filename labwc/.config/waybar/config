@@ -1,38 +1,39 @@
 {
   "layer": "top",
   "position": "bottom",
-  "height": 32,
+  "height": 36,
   "spacing": 0,
-  "modules-left": ["memo", "run"],
+  "modules-left": ["custom/memo", "custom/run"],
   "modules-center": ["clock"],
   "modules-right": ["cpu", "memory", "bluetooth", "network"],
 
-  "memo": {
+  "custom/memo": {
     "format": "MEMO",
     "on-click": "mousepad ~/memo.txt",
     "tooltip": false
   },
 
-  "run": {
+  "custom/run": {
     "format": "RUN",
     "on-click": "tofi-drun",
     "tooltip": "false"
   },
 
   "clock": {
-    "format": "<span text-trasform='uppercase'>{:%a %d %b %H:%M}</span>",
-    "format-alt": "<span text-trasform='uppercase'{:%H:%M}</span>",
+    "format": "<span text-transform='uppercase'>{:%a %d %b %H:%M}</span>",
+    "format-alt": "<span text-transform='uppercase'>{:%H:%M:%S}</span>",
     "tooltip-format": "<tt>{calendar}</tt>",
+    "interval": 1,
     "calendar": {
       "mode": "month",
-      "mode-mon-col": 1,
+      "mode-mon-col": 0,
       "on-scroll": 1,
       "on-click-right": "mode",
       "format": {
         "months": "<span color='#fffffe'><b>{}</b></span>",
         "days": "<span color='#efefef'><b>{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff0000'><b><u>{}</u></b></span>"
+        "today": "<span color='#ff0000'><b>{}</b></span>"
       }
     },
     "actions":  {
@@ -63,7 +64,7 @@
   },
 
   "network": {
-    "format-wifi": "CONNECTED",
+    "format-wifi": "ONLINE",
     "tooltip-format": "{essid} [{signalStrength}%] - {ipaddr}",
     "format-disconnected": "OFFLINE",
     "on-click-right": ""
