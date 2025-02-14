@@ -1,5 +1,5 @@
 {
-  "layer: "top",
+  "layer": "top",
   "position": "bottom",
   "height": 32,
   "spacing": 0,
@@ -16,12 +16,12 @@
   "run": {
     "format": "RUN",
     "on-click": "tofi-drun",
-    "tooltip": false"
+    "tooltip": "false"
   }
 
   "clock": {
     "format": "<span text-trasform='uppercase'>{:%a %d %b %H:%M}</span>",
-    "format-alt": <span text-trasform='uppercase"{:%H:%M}</span>",
+    "format-alt": "<span text-trasform='uppercase'{:%H:%M}</span>",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
