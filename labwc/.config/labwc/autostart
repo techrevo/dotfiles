@@ -1,0 +1,4 @@
+# LabWC autostart file
+
+swaybg -i ~/Pictures/Wallpapers/water-green.jpg -m fill >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
