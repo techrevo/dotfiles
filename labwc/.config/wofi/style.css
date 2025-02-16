@@ -1,0 +1,21 @@
+window {
+    margin: 18px 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+
+}
+
+#input {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#inner-box {
+    margin: 12px;
+}
+
+#text {
+    margin: 5px;
+}
