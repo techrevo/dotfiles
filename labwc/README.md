@@ -12,6 +12,16 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
+## **Step 2: Install Packages**
+Install required packages for your desktop environment:
+```sh
+sudo apt install -y labwc foot waybar swaylock grim slurp \
+  pcmanfm mousepad mpv firefox-esr tofi \
+  xdg-utils xclip wl-clipboard gvfs
+```
+
+---
+
 ## **Step 3: Install Labwc**
 
 Labwc is a window manager for **Wayland**, so you need additional tools for a functional setup.
