@@ -12,7 +12,7 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-## **Step 2: Install Labwc**
+## **Step 3: Install Labwc**
 
 Labwc is a window manager for **Wayland**, so you need additional tools for a functional setup.
 
@@ -76,7 +76,7 @@ labwc
 
 ---
 
-## **Step 3: Copy Labwc Configuration**
+## **Step 4: Copy Labwc Configuration**
 
 Clone this repository and select LabWC folder, then copy ```.config/labwc``` into your home directory:
 ```sh
@@ -104,7 +104,7 @@ startx
 
 ---
 
-## **Step 4: Configure Waybar (Status Bar)**
+## **Step 5: Configure Waybar (Status Bar)**
 Labwc does not include a status bar, so we use **Waybar**. Create the configuration folder:
 ```sh
 mkdir -p ~/.config/waybar
@@ -132,7 +132,7 @@ waybar &
 
 ---
 
-## **Step 5: Configure Wofi (Application Launcher)**
+## **Step 6: Configure Wofi (Application Launcher)**
 
 Create the Wofi configuration folder:
 ```sh
@@ -174,7 +174,7 @@ Now, press **Super + D** to launch Wofi.
 
 ---
 
-## **Step 6: Improve UI Appearance**
+## **Step 7: Improve UI Appearance**
 Install **LXAppearance** and **Papirus icon theme**:
 ```sh
 sudo apt install -y lxappearance papirus-icon-theme
@@ -187,7 +187,7 @@ Select a **GTK theme and icon pack**.
 
 ---
 
-## **Step 7: Autostart Essential Applications**
+## **Step 8: Autostart Essential Applications**
 To start **Waybar, Foot, and PCManFM** at login, create an autostart script:
 ```sh
 mkdir -p ~/.config/labwc
