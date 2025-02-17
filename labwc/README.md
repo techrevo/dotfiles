@@ -1,6 +1,6 @@
 # Setting Up a Lightweight Labwc Desktop Environment on Debian
 
-This guide will walk you through setting up a **lightweight** and **fully functional** desktop environment using **Labwc** on **Debian**.
+This guide will walk you through setting up a **lightweight** and **fully functional** desktop environment using **Labwc** on **Debian**. An equivalent installation can also be performed on other operating systems by searching for the relevant packages in the supported repositories.
 
 ---
 
@@ -76,12 +76,12 @@ labwc
 
 ---
 
-## **Step 3: Create Labwc Configuration**
+## **Step 3: Copy Labwc Configuration**
 
-Create the default configuration:
+Clone this repository and select LabWC folder, then copy ```.config/labwc``` into your home directory:
 ```sh
 mkdir -p ~/.config/labwc
-cp /etc/xdg/labwc/*.xml ~/.config/labwc/
+cp labwc/.config/labwc ~/.config/labwc/
 ```
 
 Start Labwc manually:
