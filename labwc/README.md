@@ -15,7 +15,7 @@ sudo apt update && sudo apt upgrade -y
 ## **Step 2: Install Packages**
 Install required packages for your desktop environment:
 ```sh
-sudo apt install -y labwc foot waybar swaylock grim slurp \
+sudo apt install -y foot waybar swaylock grim slurp \
   pcmanfm mousepad mpv firefox-esr tofi \
   xdg-utils xclip wl-clipboard gvfs
 ```
