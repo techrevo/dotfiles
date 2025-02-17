@@ -16,7 +16,7 @@ sudo apt update && sudo apt upgrade -y
 Install required packages for your desktop environment:
 ```sh
 sudo apt install -y foot waybar swaylock grim slurp \
-  pcmanfm mousepad mpv firefox-esr tofi \
+  pcmanfm mousepad mpv firefox-esr wofi \
   xdg-utils xclip wl-clipboard gvfs
 ```
 
