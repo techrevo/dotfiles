@@ -12,27 +12,38 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-## **Step 2: Install Labwc and Essential Packages**
+## **Step 2: Install Labwc**
 
 Labwc is a window manager for **Wayland**, so you need additional tools for a functional setup.
 
-### **Option 1: Install Labwc from External Repository (Recommended)**
-Since Labwc is not included in the official Debian repositories, you can install it from the **SwayOS** repository.
+### **Option 1: Install Labwc from Debian Sid (Recommended)**
+Labwc is available in the Debian **Sid** (unstable) repository. We will temporarily enable Sid to install it.
 
-#### **1️⃣ Add the Repository**
+#### **1️⃣ Add the Debian Sid Repository Temporarily**
 ```sh
-echo "deb [signed-by=/usr/share/keyrings/swayos-archive-keyring.gpg] https://debian.swayos.dev bookworm main" | sudo tee /etc/apt/sources.list.d/swayos.list
+echo "deb http://deb.debian.org/debian sid main" | sudo tee /etc/apt/sources.list.d/sid.list
 ```
 
-#### **2️⃣ Add the GPG Key**
+#### **2️⃣ Prevent Full System Upgrades from Sid**
 ```sh
-wget -O- https://debian.swayos.dev/key.asc | sudo tee /usr/share/keyrings/swayos-archive-keyring.gpg
+echo 'Package: *' | sudo tee /etc/apt/preferences.d/sid
+
+echo 'Pin: release a=sid' | sudo tee -a /etc/apt/preferences.d/sid
+
+echo 'Pin-Priority: 100' | sudo tee -a /etc/apt/preferences.d/sid
 ```
 
-#### **3️⃣ Update and Install Labwc**
+#### **3️⃣ Install Labwc from Sid**
 ```sh
 sudo apt update
-sudo apt install labwc
+sudo apt install -t sid labwc
+```
+
+#### **4️⃣ Remove the Sid Repository (Optional but Recommended)**
+```sh
+sudo rm /etc/apt/sources.list.d/sid.list
+sudo rm /etc/apt/preferences.d/sid
+sudo apt update
 ```
 
 ### **Option 2: Compile Labwc from Source**
