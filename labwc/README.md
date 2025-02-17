@@ -14,27 +14,54 @@ sudo apt update && sudo apt upgrade -y
 
 ## **Step 2: Install Labwc and Essential Packages**
 
-Labwc is a window manager for **Wayland**, so you need additional tools for a functional setup:
+Labwc is a window manager for **Wayland**, so you need additional tools for a functional setup.
+
+### **Option 1: Install Labwc from External Repository (Recommended)**
+Since Labwc is not included in the official Debian repositories, you can install it from the **SwayOS** repository.
+
+#### **1️⃣ Add the Repository**
 ```sh
-sudo apt install -y labwc foot waybar swaylock grim slurp \
-  pcmanfm mousepad mpv firefox-esr wofi \
-  xdg-utils xclip wl-clipboard gvfs
+echo "deb [signed-by=/usr/share/keyrings/swayos-archive-keyring.gpg] https://debian.swayos.dev bookworm main" | sudo tee /etc/apt/sources.list.d/swayos.list
 ```
 
-### **Package Overview**
-- `labwc` → Wayland window manager
-- `foot` → Lightweight terminal
-- `waybar` → Customizable status bar
-- `swaylock` → Screen lock utility
-- `grim` + `slurp` → Screenshot utilities
-- `pcmanfm` → File manager
-- `mousepad` → Simple text editor
-- `mpv` → Media player
-- `firefox-esr` → Web browser
-- `wofi` → Application launcher
-- `xdg-utils` → Open files with default applications
-- `xclip` + `wl-clipboard` → Clipboard support
-- `gvfs` → Support for remote file systems in PCManFM
+#### **2️⃣ Add the GPG Key**
+```sh
+wget -O- https://debian.swayos.dev/key.asc | sudo tee /usr/share/keyrings/swayos-archive-keyring.gpg
+```
+
+#### **3️⃣ Update and Install Labwc**
+```sh
+sudo apt update
+sudo apt install labwc
+```
+
+### **Option 2: Compile Labwc from Source**
+If you prefer to compile the latest version from source, follow these steps:
+
+#### **1️⃣ Install Dependencies**
+```sh
+sudo apt install build-essential meson ninja-build pkg-config \
+  libwayland-dev libxkbcommon-dev libpango1.0-dev libcairo2-dev \
+  libgdk-pixbuf2.0-dev libglib2.0-dev libxml2-dev scdoc git
+```
+
+#### **2️⃣ Clone the Labwc Repository**
+```sh
+git clone https://github.com/labwc/labwc.git
+cd labwc
+```
+
+#### **3️⃣ Compile and Install**
+```sh
+meson setup build
+ninja -C build
+sudo ninja -C build install
+```
+
+Now you can start **Labwc** with:
+```sh
+labwc
+```
 
 ---
 
